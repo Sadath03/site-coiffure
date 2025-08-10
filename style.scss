@@ -1,0 +1,349 @@
+$bg-primarycolor: #F5F5DC;
+$bg-secondarycolor: #04423f;
+$text-color:  #ffffff;
+$bg-color: rgb(27, 26, 29);
+$text-secondary-color: #b3495b;
+html{
+
+  scroll-behavior: smooth;
+}
+body
+{ background-color: $bg-primarycolor;
+    margin: 0;
+    color: $bg-color;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  
+}
+
+p, a, nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+// style header
+.header
+{
+    color: $bg-color;
+    width: 100%;
+   padding: 20px;
+    background-color: $bg-secondarycolor;
+    position: relative;
+    
+}
+.logo
+{
+width: 150px;
+margin-right: 60px;
+height: auto;
+
+}
+
+
+// style navbar
+.container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar{
+    &_nav{
+     display: flex;
+     align-items: center;
+      li{
+        list-style: none;
+        margin: 30px;
+        a{
+          text-decoration: none;
+          color: $text-color;
+          transition: 250ms;
+          margin-left: 25px;
+          &:hover{
+           background-color: $text-color;
+           padding: 15px 10px 15px 10px;
+           border-radius: 10px;
+           color: $bg-secondarycolor;
+           transform: scale(1.15);
+           &:active{
+            background-color: $bg-color;
+            color: $text-color;
+          }
+        }
+      }
+      }
+    }
+}
+
+// style prendre rdv
+#navbar_link--pink{
+
+ background-color: $bg-color;
+ border: 1px solid none;
+ padding: 15px 10px 15px 10px;
+ border-radius: 10px;
+ color: $text-color;
+ 
+}
+
+#navbar_link--pink:hover
+{
+color: $text-color;
+}
+
+#navbar_link--pink:active{
+  background-color: $bg-color;
+color: $text-color;
+
+}
+
+// section accueil
+.accueil{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  transform: scale(1);
+  animation: fadeIn 2s ease-in-out forwards;
+  p{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 50px;
+    
+  }
+  .btn{
+    border: 1px ;
+    background-color: $bg-secondarycolor;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $text-color;
+    padding: 10px 25px 10px 25px;
+    &:active{
+      background-color: $bg-color;
+      color: $text-color;
+    }
+    
+    }
+   }
+
+
+// style de services
+#services{
+  padding: 25px 0 25px 25px;
+
+  h1{
+font-size: 2em;
+color: $bg-color;
+  }
+  .service{
+
+    text-align: center;
+    section{
+    width: auto;
+      display: inline-block;
+      margin: 25px;
+    }
+  }
+}
+
+  .scissors {
+    border-radius: 30%;
+    width: 10%;
+    background-color: $bg-secondarycolor;
+    padding: 5px;
+  }
+
+
+  // style de l'image
+#images{
+  padding: 25px 0 25px 25px;
+  h2{
+    color: $bg-color;
+    font-size: 2em;
+    }  
+    .image{
+    padding: 20px 0 20px 0;
+    }
+  }
+  
+  
+/* Style du carousel */
+.carousel-inner img {
+  height: 300px;
+  object-fit: cover;
+  margin: auto;
+}
+
+
+// style du contact
+#contacts{
+  padding: 25px 0 25px 25px;
+  .contact{
+    font-family: 'Playfair Display', serif;
+    h2{
+      color: $bg-color;
+    }
+    
+  }
+  h3{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 40px;
+  }  
+  a{
+    text-decoration: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    i{
+    padding: 0 5px 0 0;
+    }
+  }
+  
+}
+
+// footer
+footer{
+  background-color: $bg-secondarycolor;
+  padding: 20px;
+  text-align: center;
+  color: $text-color;
+}
+
+
+
+/* Smartphones standard (iPhone XR, Galaxy, etc.) */
+@media (max-width: 480px) {
+  .header{
+  padding: 1rem;
+  
+
+  }
+  
+//  style navbar
+  .container{
+    display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;        
+  padding: 1em;
+    .logo{
+      max-width: 100%;
+      height: auto;
+      width: 4rem;
+      position: absolute;
+      top: 0 ;
+      left: 1rem;
+      
+    }
+    nav{
+      
+      ul{
+        margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  li{
+    padding: 0;
+    margin-right: 0;
+  }
+      }
+    }
+  }
+#navbar_link--pink{
+  background-color: $bg-secondarycolor;
+}
+
+
+  #accueil p{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .btn{
+    margin: 1rem;
+  }
+
+  // style service
+
+  .service{
+    text-align: center;
+    section{
+      padding: 0;
+    }
+  }
+
+  .image, p{
+    text-align: center;
+    margin: 1rem 1rem 0 0;
+  }
+  // style contact
+  #contacts
+  {
+    .contact{
+      iframe{
+        height: 30rem ;
+        width: 100%;
+        padding-right: 2rem;
+      }
+      p{
+        .custom{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+
+  &:checked + .hamburger-icon + .navbar {
+    display: block;
+  }
+}
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  span {
+    height: 3px;
+    width: 25px;
+    background-color: $text-color;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+// Affichage responsive
+@media (max-width: 480px) {
+  
+   .hamburger-icon {
+  display: flex;
+  position: absolute;  // mieux pour placer précisément
+  top: 1rem;           // espace depuis le haut du header
+  right: 1rem;         // espace depuis la droite
+  left: auto;          // annule le left
+  z-index: 1000;       // au-dessus des autres éléments
+}
+
+
+   .navbar {
+    display: none;
+    position: absolute;
+    top: 3.5rem;      // sous le header (ajuste si besoin)
+    right: 1rem;
+    background-color: $bg-secondarycolor;
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 999;
+    width: 200px;     // ou largeur adaptée
+  }
+  
+
+  .menu-toggle:checked + .hamburger-icon + .navbar {
+    display: block;
+  }
+}
