@@ -1,264 +1,146 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Institut Multi-Béauté propose des coupes de cheveux personnalisées, des colorations et des coiffures dans un salon moderne et accueillant.">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Bootstrap CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="D:\Bootstrap\bootstrap-5.1.3-dist\css\bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="D:\Bootstrap\bootstrap-5.1.3-dist\js\bootstrap.min.js">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
-	<title>Institut Multi-Béauté</title>
+    <title>Institut Multi-Béauté</title>
 </head>
+
 <body>
-	<header class="header">
-			<div class="container">
-            <a href="index.html"><img src="D:\projet\image\Logo.png" alt="Photo du logo " class="logo"></a>
-			<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html"><img src="images/Logo.png" alt="Logo" class="logo"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger-icon">
-               <span></span>
-               <span></span>
-               <span></span>
-			   
-         </label>
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="navbar">
+                <ul class="navbar_nav">
+                    <li><a href="#" class="navbar_link">Accueil</a></li>
+                    <li><a href="#services" class="navbar_link">Services</a></li>
+                    <li><a href="#images" class="navbar_link">Galerie</a></li>
+                    <li><a href="#contacts" id="navbar_link--pink">Prendre Rdv</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-			<nav class="navbar"> 
-			   <ul class="navbar_nav">
-				  <li><a href="#" class="navbar_link">Accueil</a></li>
-				  <li><a href="#services" class="navbar_link">Services</a></li>
-				  <li><a href="#images" class="navbar_link">Galerie</a></li>
-				  <li><a href="#contacts" id="navbar_link--pink">Prendre Rdv</a></li>
-			   </ul>
-			 </nav>
-			</div>
-	</header>
+    <!-- Section Accueil -->
+    <section id="accueil">
+        <div class="accueil">
+            <p>Art de la beauté capillaire</p>
+            <p>Sublimez votre chevelure</p>
+            <a href="#services" class="btn">Nos services</a>
+        </div>
+    </section>
 
-	<!-- section accueil -->
-	<section id="accueil">
-		<section class="accueil">
-			<p>Art de la beauté capillaire</p>
-			<p>Sublimez votre chevelure</p>
-			<a href="#services" class="btn">Nos services</a>
-		</section>
-	</section>
+    <!-- Section Services -->
+    <section id="services">
+        <h1>Nos services</h1>
+        <div class="service">
+            <div>
+                <img src="images/Ciseau.png" alt="logo ciseau" class="scissors">
+                <h2>Coupe</h2>
+                <p>Coupe sur mesure pour hommes et femmes</p>
+            </div>
+            <div>
+                <img src="images/paint.png" alt="logo peinture" class="scissors">
+                <h2>Coloration</h2>
+                <p>Coloration personnalisée pour un look unique</p>
+            </div>
+            <div>
+                <img src="images/coiffeur.png" alt="logo coiffeur" class="scissors">
+                <h2>Coiffure</h2>
+                <p>Chignons et coiffures pour toutes occasions</p>
+            </div>
+        </div>
+    </section>
 
-	<!-- section service -->
-<section id="services">
-      <h1>Nos services</h1>
-	  <section class="service">
-	  <section>
-		<img src="image\Ciseau.png" alt="logo ciseau" class="scissors">
-		<h2>Coupe</h2>
-		<p>Coupe sur mesure pour hommes et femmes</p>
-	  </section>
+    <!-- Section Galerie -->
+    <section id="images">
+        <h2>Nos galeries</h2>
+        <p>Inspirez-vous de nos réalisations : Coiffures tendances, transformations capillaires, et looks élégants créés avec soin par notre équipe.</p>
+        <div class="image">
+            <!-- Carousel -->
+            <div id="carouselSalon" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-indicators">
+                    <!-- Dynamically generated indicators if needed -->
+                    <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="1"></button>
+                    <!-- Add more indicators here -->
+                </div>
 
-	  <section>
-		<img src="image/paint.png" alt="logo ciseau" class="scissors">
-		<h2>Coloration</h2>
-		<p>Coloration personnalisée pour un look unique</p>
-	  </section>
+                <div class="carousel-inner">
+                    <!-- Example carousel items -->
+                    <div class="carousel-item active">
+                        <img src="images/Coupe1.jpg" class="d-block" alt="Coiffure élégante">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Coupe2.jpg" class="d-block" alt="Salon chic">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Coupe3.jpg" class="d-block" alt="Coloration tendance">
+                    </div>
+                    <!-- Add more carousel items here -->
+                </div>
 
-	  <section>
-		<img src="image/coiffeur.png" alt="logo ciseau" class="scissors">
-		<h2>Coiffure</h2>
-		<p>Chignons et coifffures pour toutes occasions</p>
-	  </section>
-	</section>
-   </section>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalon" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSalon" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Section Contact -->
+    <section id="contacts">
+        <div class="contact">
+            <h2>Contact</h2>
+            <h3>Adresse</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1401.863440720364!2d2.260693320993412!3d6.385150577965784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sbj!4v1746804883704!5m2!1sfr!2sbj" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>📍 Cococodji, Oiseau blanc derrière le rail, 5ème von à droite <br>
+                📞 01 97 26 45 72
+                <a href="https://wa.me/+22997264572" target="_blank">
+                    <i class="fab fa-whatsapp custom" style="font-size: 40px; color: #25d366;"></i> Discutez avec nous sur WhatsApp
+                </a>
+            </p>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <section>
+            <p>&copy; 2025 Salon de Coiffure | Tous droits réservés</p>
+        </section>
+    </footer>
 
-   <!-- secton galerie -->
-	<section id="images">
-<h2>Nos galeries</h2>
-<p>
-Inspirez-vous de nos réalisations Coiffures tendances, transformations capillaires, et looks élégants créés avec soin par notre équipe.
-</p>
-<section class="image">
-<!-- Carousel -->
-<div id="carouselSalon" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-	<div class="carousel-indicators">
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="0" class="active"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="1"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="2"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="3"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="4"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="5"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="6"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="7"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="8"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="9"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="10"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="11"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="12"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="13"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="14"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="15"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="16"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="17"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="18"></button>
-	  <button type="button" data-bs-target="#carouselSalon" data-bs-slide-to="19"></button>
-	</div>
-  
-	<div class="carousel-inner">
-	  <div class="carousel-item active">
-		<img src="D:\projet\image\Coupe1.jpg" class="d-block" alt="Coiffure élégante">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe2.jpg" class="d-block" alt="Salon chic">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe3.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe4.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe5.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe6.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe7.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe8.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe9.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe10.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe11.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe12.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe13.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe14.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe15.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe16.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe17.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe18.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe19.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-
-	  <div class="carousel-item">
-		<img src="D:\projet\image\Coupe20.jpg" class="d-block" alt="Coloration tendance">
-		<div class="carousel-caption d-none d-md-block">
-		</div>
-	  </div>
-	</div>
-  
-	<button class="carousel-control-prev" type="button" data-bs-target="#carouselSalon" data-bs-slide="prev">
-	  <span class="carousel-control-prev-icon"></span>
-	  <span class="visually-hidden">Précédent</span>
-	</button>
-	<button class="carousel-control-next" type="button" data-bs-target="#carouselSalon" data-bs-slide="next">
-	  <span class="carousel-control-next-icon"></span>
-	  <span class="visually-hidden">Suivant</span>
-	</button>
-  </div>
-  
-</section>
-	</section>
-
- <!-- section contact -->
-<section id="contacts">
-	<section class="contact">
-		<h2>Contact</h2>
-		<h3>Adresse</h3>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1401.863440720364!2d2.260693320993412!3d6.385150577965784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sbj!4v1746804883704!5m2!1sfr!2sbj" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		<p>📍 Cococodji, Oiseau blanc derrière le rail, 5ème von à droite <br>
-		📞 01 97 26 45 72
-		<a href="https://wa.me/+22997264572" target="_blank">
-		<i class="fab fa-whatsapp custom" style="font-size: 40px; color: #25d366;"></i> Discutez avec nous sur whatsapp
-	  </a>
-		</p>
-	</section>
-	
-</section>
- 
-<!-- section footer -->
-<footer >
-		<section>
-			<p>&copy; 2025 Salon de Coiffure | Tous droits réservés</p>
-		</footer>
-		</section>
-
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
